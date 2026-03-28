@@ -32,6 +32,7 @@ Titanic-Tutoring/
 📄 ფაილების აღწერა
 
 🧼 Cleaning & 🧬 Feature Engineering
+
 ➤ Missing Values (NA-ების შევსება)
 
 Age: [მოკლედ დაწერე შენი მიდგომა, მაგ: შეივსო title-ების მიხედვით მედიანით ან უბრალოდ მედიანით]
@@ -53,9 +54,11 @@ Sex → ბინარული კოდირება (0/1).
 Embarked და Pclass → OneHotEncoder (ან სხვა ენკოდერი, რასაც იყენებ).
 
 🧪 Training & ექსპერიმენტები
+
 ტიტანიკის ამოცანისთვის მთავარი მეტრიკაა Accuracy. ყველა მოდელი დარეგისტრირდა MLflow-ში და გადაირჩა K-Fold Cross Validation-ის საშუალებით.
 
 🔹 Model 1: Logistic Regression (Baseline)
+
 მიდგომა: უმარტივესი მოდელი მხოლოდ ძირითადი რიცხვითი და One-Hot ენკოდირებული სვეტებით.
 
 შედეგი: Accuracy: [შენი ციფრი]
@@ -63,6 +66,7 @@ Embarked და Pclass → OneHotEncoder (ან სხვა ენკოდე
 ექსპერიმენტის ბმული: [ჩასვი MLflow ლინკი]
 
 🔹 Model 2: Decision Tree & Random Forest
+
 მიდგომა: ვცადეთ GridSearch-ით max_depth და n_estimators პარამეტრების ოპტიმიზაცია.
 
 შედეგი (Random Forest): Accuracy: [შენი ციფრი]
@@ -71,6 +75,7 @@ Embarked და Pclass → OneHotEncoder (ან სხვა ენკოდე
 
 
 📊 MLflow – შემაჯამებელი მიმოხილვა
+
 ყველა მოდელის ექსპერიმენტი რეგისტრირებულია DagsHub / MLflow-ში.
 
 ▪️ ჩაწერილი მეტრიკები:
@@ -80,11 +85,13 @@ Accuracy – კეგლის მთავარი მეტრიკა.
 F1-Score – კლასების დისბალანსის (გადარჩა/არ გადარჩა) უკეთ შესაფასებლად.
 
 ⭐️ საუკეთესო მოდელი:
+
 საბოლოოდ კეგლზე დასასაბმითებლად შეირჩა [ჩაწერე საუკეთესო მოდელი, მაგ: XGBoost Version 1], რადგან ტესტ სეტზე აჩვენა საუკეთესო გენერალიზაციის უნარი.
 
 Kaggle Leaderboard Score: [კეგლის ქულა]
 
 🛠 გამოცდილება (Lessons Learned)
+
 Feature Engineering: მხოლოდ FamilySize სვეტის დამატებამ საბაზისო მოდელის სიზუსტე [X]%-ით გაზარდა.
 
 Overfitting-ის კონტროლი: ხისებრი მოდელები ძალიან სწრაფად იმახსოვრებდნენ თრეინინგ სეტს (100% accuracy), ამიტომ აუცილებელი გახდა max_depth და min_samples_split პარამეტრების შეზღუდვა.
