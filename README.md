@@ -57,17 +57,21 @@ Embarked და Pclass → OneHotEncoder (ან სხვა ენკოდე
 
 ტიტანიკის ამოცანისთვის მთავარი მეტრიკაა Accuracy. ყველა მოდელი დარეგისტრირდა MLflow-ში და გადაირჩა K-Fold Cross Validation-ის საშუალებით.
 
-🔹 Model 1: Logistic Regression (Baseline)
+## 🔹 Model 1: Logistic Regression (Baseline)
 
 მიდგომა: უმარტივესი მოდელი მხოლოდ ძირითადი რიცხვითი და One-Hot ენკოდირებული სვეტებით.
+
+გამოყენებული კომბინაციები: ...
 
 შედეგი: Accuracy: [შენი ციფრი]
 
 ექსპერიმენტის ბმული: [ჩასვი MLflow ლინკი]
 
-🔹 Model 2: Decision Tree & Random Forest
+## 🔹 Model 2: Decision Tree & Random Forest
 
 მიდგომა: ვცადეთ GridSearch-ით max_depth და n_estimators პარამეტრების ოპტიმიზაცია.
+
+გამოყენებული კომბინაციები: ...
 
 შედეგი (Random Forest): Accuracy: [შენი ციფრი]
 
